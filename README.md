@@ -1,6 +1,18 @@
-# Vercel Vibe Coding Agent
+# VibeStart.dev — AI Coding Platform
 
-An end-to-end, AI-powered coding environment that turns natural-language prompts into runnable apps inside an isolated Vercel Sandbox. It streams tool progress to the UI, shows logs, previews running servers, and lets you inspect generated files in real time.
+VibeStart.dev is an end-to-end, AI-powered coding environment that turns text into runnable apps inside an isolated sandbox. It streams tool progress to the UI, shows logs, previews running servers, and lets you inspect generated files in real time.
+
+This is my version of Vercel’s open‑source Vibe Coding Platform. It’s community‑driven — contributions are welcome — and the roadmap is evolving. See the upstream example at [vercel/examples → apps/vibe-coding-platform](https://github.com/vercel/examples/tree/main/apps/vibe-coding-platform) and this public repo at [Noisemaker111/vibestart.dev](https://github.com/Noisemaker111/vibestart.dev). This repository is public and intended to remain public.
+
+---
+
+## Branding and attribution
+
+- This is my version of Vercel’s open‑source Vibe Coding Platform.
+- Community‑driven: issues and PRs are welcome; the direction will evolve with feedback.
+- We acknowledge upstream inspiration and continue to leverage Vercel services (AI Gateway, Sandbox) where applicable.
+- Primary repository: [Noisemaker111/vibestart.dev](https://github.com/Noisemaker111/vibestart.dev)
+- Upstream example: [vercel/examples → apps/vibe-coding-platform](https://github.com/vercel/examples/tree/main/apps/vibe-coding-platform)
 
 Built with Next.js 15, React 19, Tailwind CSS, and the AI SDK v5. It integrates with Vercel AI Gateway for multi-model support (OpenAI GPT‑5, O4-mini, Anthropic Claude, Gemini, Nova, Grok, etc.).
 
@@ -33,7 +45,7 @@ Note: This repo currently has no test script configured.
 ## What this project does
 
 - Lets you chat with an agent that can:
-  - Create a fresh Vercel Sandbox (ephemeral Linux container)
+  - Create a fresh sandbox (via Vercel Sandbox; ephemeral Linux container)
   - Generate and upload complete files into the Sandbox
   - Run commands (install, build, start) and wait for completion
   - Expose ports and fetch a public preview URL
@@ -159,7 +171,7 @@ All tools live in `ai/tools/` and are registered in `ai/tools/index.ts`.
 - createSandbox
   - Input: `{ timeout?: number, ports?: number[] }`
   - Output stream: `data-create-sandbox`
-  - Creates a Vercel Sandbox and streams a `sandboxId`
+  - Creates a sandbox (via Vercel Sandbox) and streams a `sandboxId`
 
 - generateFiles
   - Input: `{ sandboxId: string }`
@@ -296,6 +308,44 @@ If you change TypeScript config or aliases, restart the dev server.
 
 ---
 
+## Contributing (simple and friendly)
+
+You don’t need to be an expert to help. Small, focused changes are perfect.
+
+- How to contribute
+  1. Fork → create a branch, e.g. `feature/short-title`
+  2. Setup locally: `bun install` → `bun run dev`
+  3. Make a change (docs copy, UI polish, bug fix, feature)
+  4. Check it: `bun run lint` → optional `bun run build` ( i dont do this but you should )
+  5. Open a PR with: problem, what changed, before/after screenshot if UI
+
+- Good first ideas
+  - Improve README/docs (typos, clarity, examples)
+  - Small UI polish (accessibility, spacing, labels)
+  - Add a sample app template for file generation
+  - Tweak model list or defaults in `ai/constants.ts`
+
+- Scope & style
+  - Keep PRs small and single-purpose
+  - No secrets in code; follow existing formatting
+  - Aim for clear naming and accessible UI
+
+If you’re unsure, open an issue with your idea. Happy to help scope it down.
+
+---
+
+## Lightweight roadmap (will evolve)
+
+- Model presets in the UI and per-model defaults
+- Save/load chat + sandbox session state
+- Export generated project as a downloadable repo/zip
+- Example templates gallery for common stacks
+- Better onboarding copy and accessibility passes
+
+Got a suggestion? Open an issue or PR.
+
+---
+
 ## License
 
-MIT – see LICENSE (or add one if missing).
+MIT – see `LICENSE`.

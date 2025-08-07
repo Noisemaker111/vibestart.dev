@@ -48,7 +48,7 @@ export function Welcome(props: {
         >
           <div className="p-6 space-y-4 ">
             <h1 className="text-2xl sans-serif font-semibold tracking-tight mb-7">
-              OSS Vibe Coding Platform
+              VibeStart.dev
             </h1>
             <p className="text-base text-primary">
               This is a <strong>demo</strong> of an end-to-end coding platform
@@ -75,6 +75,12 @@ export function Welcome(props: {
                 AI SDK
               </ExternalLink>
               .
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Based on Vercel’s open-source Vibe Coding Platform —{' '}
+              <ExternalLink href="https://github.com/vercel/examples/tree/main/apps/vibe-coding-platform">
+                vercel/examples: apps/vibe-coding-platform
+              </ExternalLink>
             </p>
           </div>
           <footer className="bg-secondary flex justify-end p-4 border-t border-border">

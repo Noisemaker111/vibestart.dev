@@ -22,8 +22,8 @@ export function SandboxState() {
             Sandbox max. duration reached
           </DialogTitle>
           <DialogDescription className="sr-only">
-            The Vercel Sandbox is already stopped. You can start a new session
-            by clicking the button below.
+            The sandbox is already stopped. You can start a new session by
+            clicking the button below.
           </DialogDescription>
         </DialogHeader>
         <DialogContent>
