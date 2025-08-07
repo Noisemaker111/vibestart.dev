@@ -46,19 +46,19 @@ Note: This repo currently has no test script configured.
 ## Architecture overview
 
 ```mermaid
-flowchart TD
-  UI[Next.js App (React 19)] -->|/api/chat| ChatAPI
-  ChatAPI[/app/api/chat/route.ts/] --> AI[AI SDK streamText]
-  AI --> Tools[UI Tool Calls]
-  Tools --> Sandbox[@vercel/sandbox]
-  Tools --> Gateway[Vercel AI Gateway]
-  Gateway --> LLMs[(OpenAI/Anthropic/Gemini/...)]
+graph TD;
+  UI["Next.js App (React 19)"] -->|/api/chat| ChatAPI
+  ChatAPI["/app/api/chat/route.ts"] --> AI["AI SDK streamText"]
+  AI --> Tools["UI Tool Calls"]
+  Tools --> Sandbox["@vercel/sandbox"]
+  Tools --> Gateway["Vercel AI Gateway"]
+  Gateway --> LLMs["OpenAI / Anthropic / Gemini / ..."]
 
-  subgraph UI Panels
-    ChatPanel[Chat]
-    FilesPanel[File Explorer]
-    LogsPanel[Logs]
-    PreviewPanel[Preview]
+  subgraph "UI Panels"
+    ChatPanel["Chat"]
+    FilesPanel["File Explorer"]
+    LogsPanel["Logs"]
+    PreviewPanel["Preview"]
   end
 
   ChatPanel -->|messages| ChatAPI
