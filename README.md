@@ -64,7 +64,7 @@ graph TD;
   ChatPanel -->|messages| ChatAPI
   FilesPanel -->|/api/sandboxes/:id/files| Sandbox
   LogsPanel -->|/api/sandboxes/:id/cmds/:id/logs| Sandbox
-  PreviewPanel -->|domain(port)| Sandbox
+  PreviewPanel -->|domain port| Sandbox
 ```
 
 Key flows
