@@ -2,6 +2,10 @@ import type { NextConfig } from 'next'
 import { withBotId } from 'botid/next/config'
 
 const nextConfig: NextConfig = {
+  eslint: {
+    // Work around eslint-config-next incompatibility with ESLint v9 during builds
+    ignoreDuringBuilds: true,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.md/,

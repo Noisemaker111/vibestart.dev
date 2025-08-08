@@ -3,15 +3,17 @@ import type { DataPart } from '../messages/data-parts'
 import { Sandbox } from '@vercel/sandbox'
 import { tool } from 'ai'
 import description from './create-sandbox.md'
-import z from 'zod/v3'
+import z from 'zod'
 
 interface Params {
   writer: UIMessageStreamWriter<UIMessage<never, DataPart>>
 }
 
+const descriptionText = description
+
 export const createSandbox = ({ writer }: Params) =>
   tool({
-    description,
+    description: descriptionText,
     inputSchema: ((): z.ZodObject<{
       timeout: z.ZodOptional<z.ZodNumber>
       ports: z.ZodOptional<z.ZodArray<z.ZodNumber>>
@@ -45,7 +47,7 @@ export const createSandbox = ({ writer }: Params) =>
       // Determine effective timeout:
       // - Prefer explicit `timeout` param
       // - Else use env `SANDBOX_TIMEOUT_MS` if set (number, in ms)
-      // - Else fall back to a longer default of 30 minutes
+      // - Else fall back to a longer default of 45 minutes
       // Cap at the documented maximum (45 minutes)
       const MAX_TIMEOUT_MS = 45 * 60 * 1000
       const DEFAULT_TIMEOUT_MS = 45 * 60 * 1000

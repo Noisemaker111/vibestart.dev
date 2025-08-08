@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { Sandbox } from '@vercel/sandbox'
-import z from 'zod/v3'
+import z from 'zod'
 
 const FileParamsSchema = z.object({
   sandboxId: z.string(),

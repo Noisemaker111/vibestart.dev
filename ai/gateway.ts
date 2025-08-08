@@ -7,7 +7,7 @@ const gateway = createGatewayProvider({
 })
 
 interface AvailableModel {
-  id: GatewayModelId | 'openai/gpt-5'
+  id: GatewayModelId
   name: string
 }
 

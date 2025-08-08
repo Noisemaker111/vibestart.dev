@@ -1,6 +1,6 @@
 import { type GatewayModelId } from '@ai-sdk/gateway'
 
-export const DEFAULT_MODEL: GatewayModelId[number] = 'openai/gpt-5'
+export const DEFAULT_MODEL: GatewayModelId = 'openai/gpt-5'
 
 export const SUPPORTED_MODELS: GatewayModelId[] = [
   'amazon/nova-pro',

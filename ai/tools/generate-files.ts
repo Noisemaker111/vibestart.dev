@@ -3,9 +3,12 @@ import type { DataPart } from '../messages/data-parts'
 import { Sandbox } from '@vercel/sandbox'
 import { streamObject, tool } from 'ai'
 import { getModelOptions } from '../gateway'
+import z from 'zod'
 import description from './generate-files.md'
 import prompt from './generate-files-prompt.md'
-import z from 'zod/v3'
+
+const descriptionText = description
+const promptText = prompt
 
 interface Params {
   modelId: string
@@ -27,7 +30,7 @@ const fileSchema = z.object({
 
 export const generateFiles = ({ writer, modelId }: Params) =>
   tool({
-    description,
+    description: descriptionText,
     inputSchema: z.object({
       sandboxId: z.string(),
     }),
@@ -45,7 +48,7 @@ export const generateFiles = ({ writer, modelId }: Params) =>
        */
       const result = streamObject({
         ...getModelOptions(modelId),
-        messages: [...messages, { role: 'user', content: prompt }],
+        messages: [...messages, { role: 'user', content: promptText }],
         schema: z.object({ files: z.array(fileSchema) }),
         onError: (error) => {
           console.error('Error communicating with AI')

@@ -2,8 +2,9 @@ import type { UIMessageStreamWriter, UIMessage } from 'ai'
 import type { DataPart } from '../messages/data-parts'
 import { Sandbox } from '@vercel/sandbox'
 import { tool } from 'ai'
+import z from 'zod'
 import description from './wait-command.md'
-import z from 'zod/v3'
+const descriptionText = description
 
 interface Params {
   writer: UIMessageStreamWriter<UIMessage<never, DataPart>>
@@ -11,7 +12,7 @@ interface Params {
 
 export const waitCommand = ({ writer }: Params) =>
   tool({
-    description,
+    description: descriptionText,
     inputSchema: z.object({
       sandboxId: z
         .string()
