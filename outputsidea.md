@@ -1,0 +1,300 @@
+﻿- Build a React movie review site with ratings and comments
+- Create a Vue.js budget planner with category breakdowns
+- Generate a Svelte book library with reading progress tracking
+- Build an Angular event calendar with RSVP functionality
+- Create a Next.js job board with application tracking
+- Generate a React quiz app with multiple choice questions
+- Build a Vue music streaming interface with playlists
+- Create a Svelte workout routine builder with timers
+- Generate an Angular inventory management system
+- Build a React social media dashboard with post scheduling
+- Create a Vue.js restaurant menu with online ordering
+- Generate a Svelte travel itinerary planner
+- Build a Next.js real estate listing site with filters
+- Create a React cryptocurrency portfolio tracker
+- Generate a Vue password manager with encryption
+- Build an Angular project management tool with Kanban boards
+- Create a Svelte language learning flashcard app
+- Generate a React stock market dashboard with charts
+- Build a Vue.js recipe sharing platform with ratings
+- Create a Next.js blog platform with comment system
+- Generate an Angular time tracking app for freelancers
+- Build a React weather app with location-based forecasts
+- Create a Vue.js photo gallery with tagging
+- Generate a Svelte habit tracker with streak visualization
+- Build a Next.js e-commerce store with shopping cart
+- Create a Python FastAPI for managing student grades
+- Build a Node.js Express API for restaurant reservations
+- Generate a Go Gin server for handling file uploads
+- Create a Ruby Rails API for social media posts
+- Build a PHP Laravel service for email newsletter management
+- Generate a Java Spring Boot API for library book checkout
+- Create a C# ASP.NET service for appointment scheduling
+- Build a Python Django API for survey management
+- Generate a Node.js Koa server for chat room functionality
+- Create a Rust Axum API for cryptocurrency price tracking
+- Build a Go Fiber server for URL analytics
+- Generate a Python Flask API for image metadata extraction
+- Create a Node.js Fastify service for webhook processing
+- Build a Ruby Sinatra API for voting system
+- Generate a PHP Slim API for product catalog management
+- Create a Java Micronaut service for user notification system
+- Build a C# Minimal API for inventory alerts
+- Generate a Python Tornado server for real-time data streaming
+- Create a Node.js Hapi API for content management
+- Build a Go Echo server for payment processing
+- Generate a Rust Warp API for log aggregation
+- Create a Python Sanic server for machine learning model serving
+- Build a Node.js Nest.js API for multi-tenant SaaS
+- Generate a Ruby Grape API for mobile app backend
+- Create a PHP CodeIgniter service for forum management
+- Generate a React Native expense tracker with receipt scanning
+- Create a Flutter meditation app with guided sessions
+- Build an Ionic fitness challenge app with leaderboards
+- Generate a React Native plant care reminder app
+- Create a Flutter language exchange chat app
+- Build an Ionic local business directory
+- Generate a React Native parking spot finder
+- Create a Flutter personal finance advisor
+- Build an Ionic event networking app
+- Generate a React Native recipe suggestion app based on ingredients
+- Create a Flutter pet care tracking app
+- Build an Ionic carpooling coordination app
+- Generate a React Native study group organizer
+- Create a Flutter home maintenance reminder app
+- Build an Ionic local weather alert system
+- Create an Electron password generator with secure storage
+- Build a Tauri system monitor with resource usage graphs
+- Generate a Python Tkinter invoice generator
+- Create an Electron markdown blog editor
+- Build a Tauri image batch processor
+- Generate a Python PyQt video downloader
+- Create an Electron code snippet manager
+- Build a Tauri file encryption tool
+- Generate a Python Tkinter database browser
+- Create an Electron screen recording tool
+- Build a JavaScript Pac-Man clone with power-ups
+- Create a Python Pygame space shooter
+- Generate a Unity 2D tower defense game
+- Build a JavaScript word guessing game
+- Create a Python Pygame racing game
+- Generate a Unity 3D maze runner
+- Build a JavaScript card matching memory game
+- Create a Python Pygame breakout clone
+- Generate a Unity 2D endless runner
+- Build a JavaScript trivia quiz game
+- Create a Python script for batch image resizing
+- Build a Node.js CLI for generating project templates
+- Generate a Bash script for automated database backups
+- Create a Python web scraper for price monitoring
+- Build a PowerShell script for system cleanup
+- Generate a Python tool for CSV data analysis
+- Create a Node.js script for API endpoint testing
+- Build a Python email automation tool
+- Generate a Bash script for log file rotation
+- Create a Python PDF merger and splitter
+- Build a Node.js tool for environment variable management
+- Generate a Python script for social media post scheduling
+- Create a PowerShell tool for Windows registry cleanup
+- Build a Python script for duplicate file finder
+- Generate a Node.js CLI for code formatting across projects
+- Generate a Next.js blog that supports MDX posts and dark mode.
+- Create a Golang Gin server with a single GET /hello returning â€œHello Worldâ€.
+- Build a Python FastAPI that proxies requests to the OpenWeather API.
+- Scaffold a SvelteKit app that lists Star Wars characters via SWAPI.
+- Produce a Rust Actix-Web service that streams server-sent countdown updates.
+- Make a Vue 3 SPA that fetches and filters PokÃ©mon by type.
+- Write a C program that implements a multi-threaded TCP echo server.
+- Generate a Django app with JWT auth and CRUD for â€œnotesâ€.
+- Create a React Native app that scans barcodes and logs them locally.
+- Build a Deno Oak server that serves static files from /public.
+- Spin up an Elixir Phoenix LiveView chat with presence indicators.
+- Generate a Laravel project with Breeze auth and a â€œbooksâ€ resource.
+- Create a Bash script that backs up MySQL to S3 every hour.
+- Make a Kotlin Spring-Boot REST API with /ping returning â€œpongâ€.
+- Scaffold a Flutter mobile app that shows NASAâ€™s photo of the day.
+- Produce a Scala Play Framework app that authenticates via GitHub OAuth.
+- Write a TypeScript Bun server exposing a /status JSON endpoint.
+- Build an Angular app that displays live Bitcoin prices with RxJS WebSocket.
+- Generate a Ruby Sinatra API that converts currency via ECB rates.
+- Create a C# .NET 8 Minimal API that returns weather for a city.
+- Make a Haskell Scotty server that echoes JSON back to the caller.
+- Produce a Clojure Ring app that reverses text sent in the body.
+- Scaffold a SolidStart site featuring a live Markdown editor preview.
+- Build a Qwik app that lazy-loads images and reports LCP metrics.
+- Write a Nim HTTP server that returns {â€œstatusâ€:â€œokâ€} on /status.
+- Generate a SwiftUI iOS app that tracks daily water intake.
+- Create a Rust CLI that counts lines, words, and bytes like wc.
+- Make a Perl Dancer2 service that shortens URLs and stores in SQLite.
+- Scaffold a Gatsby site sourcing recipes from local Markdown.
+- Produce a PHP Slim micro-service that calculates Fibonacci numbers.
+- Build a Lightning Web Component listing Salesforce leads in a grid.
+- Write an OCaml Dream server returning â€œHello OCamlâ€ on root path.
+- Generate a Unity C# script moving a cube with WASD keys.
+- Create a Node.js Express API with Swagger UI and /healthz endpoint.
+- Make an R Shiny dashboard plotting live COVID-19 cases.
+- Scaffold a React app using WebSockets to show live soccer scores.
+- Produce a Julia Genie.jl web app plotting sin(x) with user control.
+- Build a Go Fiber API with rate limiting at 100 req/min.
+- Write a Bash utility that audits installed Debian packages into CSV.
+- Generate a Blazor WASM app displaying PokÃ©mon sprites by number.
+- Create a Lua Love2D game where a player dodges falling blocks.
+- Make a PowerShell script that lists outdated Windows drivers.
+- Scaffold a Deno Fresh site that streams Hacker News top stories.
+- Produce a MATLAB script solving Ax = b and plotting results.
+- Build a Go program monitoring a folder and logging FS events.
+- Write a Kotlin Compose Desktop app editing JSON files locally.
+- Generate an Erlang Cowboy server serving static assets from /priv.
+- Create an Elm SPA that fetches GitHub issues and filters by label.
+- Make a SAPUI5 app displaying employee data from an OData service.
+- Scaffold a ReScript React app showing geolocated weather.
+- Produce a Fortran program estimating Ï€ via Monte Carlo simulation.
+- Build a Swift Vapor API returning random jokes from an array.
+- Write a PHP Laravel Zero console that pings a list of URLs concurrently.
+- Generate a Rust Axum service that signs AWS S3 upload URLs.
+- Create a Nimble Nim script that downloads a web page and counts links.
+- Make a F# Giraffe web API returning a GUID on each request.
+- Scaffold an Astro site that renders Markdown blogs with RSS feed.
+- Produce a ColdFusion API endpoint returning server uptime.
+- Build a ReasonReact app that color-codes JSON diffs.
+- Write a Kotlin Ktor server that streams server-sent numbers 1-10.
+- Generate a Go Cobra CLI that compresses a directory into zip.
+- Create a Perl Mojolicious app converting temperatures units.
+- Make a Rust Bevy game where circles bounce within the window.
+- Scaffold a React Native Expo app that records audio memos.
+- Produce a Python Flask service resizing uploaded images to 128Ã—128.
+- Build a C++ program using Boost.Asio to serve HTTP â€œHelloâ€.
+- Write a Dart Shelf server with a single /version endpoint.
+- Generate a VuePress documentation site with Algolia search.
+- Create a Node.js Koa API that returns JWTs for demo user logins.
+- Make a Haxe OpenFL game where the player collects coins.
+- Scaffold an Elixir Nerves project blinking an LED every second.
+- Produce a Bash script rotating Nginx logs and uploading to CloudWatch.
+- Build a Scala ZIO-HTTP app that streams current time every second.
+- Write a PHP Symfony console that hashes passwords with bcrypt.
+- Generate a Next.js 15 app streaming markdown as HTML chunks.
+- Create a Go gRPC server implementing a Greeter service.
+- Make a React Three Fiber scene rendering a spinning globe.
+- Scaffold a Python Typer CLI that bulk-renames files by regex.
+- Produce a ClojureScript Shadow-CLJS SPA tallying live vote counts.
+- Build a Kotlin Android app that shows trending GitHub repos.
+- Write a Ruby on Rails 7 app with Hotwire realtime comments.
+- Generate a Rust Rocket server providing /metrics in Prometheus format.
+- Create an Angular PWA that caches API data for offline use.
+- Make a Lua Kong plugin that blocks IPs after 5 failed logins.
+- Scaffold a Deno KV edge function storing key-value pairs.
+- Produce a MATLAB live script visualizing Fourier series animation.
+- Build a Zig HTTP server returning JSON {â€œzigâ€:â€œrocksâ€}.
+- Write a PowerShell module interfacing with Azure Blob Storage.
+- Generate an R Plumber API returning summary stats of uploaded CSV.
+- Create a SwiftUI watchOS app counting steps and showing chart.
+- Make a CoffeeScript Node app that scrapes headlines from BBC.
+- Scaffold a Phoenix Channels demo broadcasting random numbers.
+- Produce a Go script using chromedp to screenshot a web page.
+- Build a TypeScript SolidJS app rendering live stock tickers.
+- Write a Rust WASI program that sorts lines from stdin.
+- Generate a Perl script that emails disk-space alerts via SMTP.
+- Create a Java Quarkus REST API with Panache and H2 in-mem DB.
+- Make a C# Avalonia desktop app that draws fractals.
+- Scaffold a React Next.js storefront pulling products from Shopify.
+- Produce a Bash one-liner that finds and deletes all .DS_Store files.
+- Generate a **Next.js app** that lists and searches PokÃ©mon using the PokeAPI.
+- Create a **React app** that fetches and displays random cat images from The Cat API.
+- Build a **Vue.js app** that shows the current weather for a searched city using OpenWeatherMap.
+- Make a **SvelteKit app** that displays a list of trending GitHub repositories.
+- Generate a **Next.js app** that shows NASAâ€™s Astronomy Picture of the Day.
+- Create a **React app** that lets users draw on a canvas and download the image.
+- Build a **Next.js app** that displays live cryptocurrency prices with WebSockets.
+- Make a **React app** that plays audio from a given MP3 URL.
+- Create a **Next.js app** that shows a random inspirational quote on each refresh.
+- Build a **Next.js app** that lets users search for movies using the OMDb API.
+- Generate a **React app** that shows a countdown timer to a given date.
+- Create a **Next.js app** that displays a map with Leaflet.js and OpenStreetMap tiles.
+- Build a **React app** that fetches and displays random dog facts.
+- Make a **Next.js app** that shows the ISS location in real time.
+- Create a **React app** that lets users upload an image and applies a grayscale filter.
+- Build a **Next.js app** that shows a list of Star Wars characters from SWAPI.
+- Generate a **React app** that displays a random XKCD comic.
+- Create a **Next.js app** that shows the top posts from Redditâ€™s r/programming.
+- Build a **React app** that visualizes sorting algorithms step-by-step.
+- Make a **Next.js app** that generates QR codes from user input.
+- Create a **Golang server** that responds with `"Hello World"` to any request.
+- Build a **Python Flask API** that returns the current Bitcoin price from CoinGecko.
+- Make a **Node.js Express server** that serves a static HTML landing page.
+- Create a **Deno server** that returns JSON `{ "status": "ok" }` for any GET request.
+- Build a **Java Spring Boot API** that returns a list of books in JSON format.
+- Generate a **C# .NET Core Web API** that returns `"pong"` when you send `"ping"`.
+- Create a **Go server** that proxies requests to another API and returns the result.
+- Build a **Python FastAPI app** that accepts a file upload and returns its SHA256 hash.
+- Make a **Node.js Express API** that returns a random joke from an array.
+- Create a **Go server** that logs every request to a file.
+- Build a **Golang API** that returns the Fibonacci sequence up to `n`.
+- Generate a **Node.js API** that returns the current server time in ISO format.
+- Create a **Python Flask API** that returns a random trivia question.
+- Build a **Go API** that returns the latest Hacker News headlines.
+- Make a **Node.js Express API** that returns a list of colors in HEX format.
+- Create a **Rust Actix-web API** that returns `"Hello from Rust!"`.
+- Build a **Go API** that returns the prime numbers up to `n`.
+- Generate a **Python FastAPI** that returns the top 5 cryptocurrencies by market cap.
+- Create a **Node.js API** that returns a random motivational quote.
+- Build a **Go API** that returns the current weather for a given city.
+- Create a **Rust CLI tool** that counts the number of words in a given text file.
+- Build a **Golang CLI tool** that fetches and prints the latest Hacker News headlines.
+- Make a **Python script** that scrapes the top 10 news headlines from BBC.
+- Create a **Bash script** that backs up a folder to a `.tar.gz` file.
+- Build a **Python script** that converts Markdown files to HTML.
+- Generate a **Python script** that renames all `.txt` files in a folder to lowercase.
+- Create a **Go CLI tool** that pings a list of URLs and reports their status.
+- Build a **Node.js CLI** that generates a random password.
+- Make a **Python CLI** that translates text using Google Translate API.
+- Create a **Rust CLI** that compresses images in a folder.
+- Build a **Node.js script** that sends an email using Nodemailer.
+- Make a **Python script** that downloads all images from a given webpage.
+- Create a **Bash script** that monitors CPU usage and logs it every minute.
+- Build a **Python script** that resizes all images in a folder to 800px width.
+- Generate a **Node.js script** that converts CSV to JSON.
+- Create a **Python script** that merges multiple PDFs into one.
+- Build a **Go script** that checks if a domain is available.
+- Make a **Python script** that generates a random name from a list.
+- Create a **Node.js script** that uploads a file to AWS S3.
+- Build a **Python script** that sends a Slack message via webhook.
+- Generate a **Python Pygame** that implements Snake.
+- Create a **JavaScript game** of Tic-Tac-Toe in the browser.
+- Build a **React app** that simulates Conwayâ€™s Game of Life.
+- Make a **Python Pygame** that implements Flappy Bird.
+- Create a **JavaScript canvas game** where you catch falling objects.
+- Build a **React app** that quizzes users on capital cities.
+- Generate a **Python text adventure game** in the terminal.
+- Create a **JavaScript memory matching game**.
+- Build a **React app** that simulates rolling dice.
+- Make a **Python script** that generates random D&D character sheets.
+- Create a **React app** that visualizes COVID-19 data from an API.
+- Build a **Next.js app** that shows stock prices in a chart.
+- Make a **Python script** that plots a sine wave using Matplotlib.
+- Create a **React app** that visualizes a family tree.
+- Build a **Next.js app** that shows a heatmap of earthquakes.
+- Generate a **Python script** that creates a word cloud from a text file.
+- Create a **React app** that visualizes sorting algorithms.
+- Build a **Next.js app** that shows a pie chart of expenses.
+- Make a **Python script** that generates a bar chart from CSV data.
+- Create a **React app** that visualizes a network graph.
+- Build a **PHP script** that connects to MySQL and lists all rows from a `users` table.
+- Make a **JavaScript bookmarklet** that changes all images on a page to pictures of dogs.
+- Create a **Python Tkinter app** that displays a digital clock.
+- Build a **Go server** that serves static files from a `public` directory.
+- Generate a **Python script** that sends an HTTP POST request with JSON data.
+- Create a **Node.js script** that generates a sitemap.xml for a website.
+- Build a **Python script** that checks if a website is online.
+- Make a **Go script** that generates UUIDs.
+- Create a **Node.js script** that minifies a CSS file.
+- Build a **Python script** that extracts all email addresses from a text file.
+- Generate a **Next.js app** that implements OAuth login with GitHub.
+- Create a **Go API** that stores data in Redis.
+- Build a **Python FastAPI** that streams server-sent events.
+- Make a **React app** that uses WebRTC for video chat.
+- Create a **Node.js API** that uses OpenAI API to summarize text.
+- Build a **Next.js app** that supports dark mode toggle.
+- Generate a **Go server** that implements a simple chat with WebSockets.
+- Create a **Python script** that uses Selenium to automate form filling.
+- Build a **React app** that uses IndexedDB for offline storage.
+- Make a **Next.js app** that generates memes from uploaded images.
