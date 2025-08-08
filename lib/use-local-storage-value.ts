@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export function useLocalStorageValue(key: string) {
   const [value, setValue] = useState('')
+  const writeTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
     const storedValue = localStorage.getItem(key)
@@ -11,7 +12,19 @@ export function useLocalStorageValue(key: string) {
   }, [key])
 
   useEffect(() => {
-    localStorage.setItem(key, value)
+    // Debounce writes to avoid jank during rapid stream updates
+    if (writeTimeoutRef.current !== null) {
+      clearTimeout(writeTimeoutRef.current)
+    }
+    writeTimeoutRef.current = window.setTimeout(() => {
+      localStorage.setItem(key, value)
+    }, 150)
+    return () => {
+      if (writeTimeoutRef.current !== null) {
+        clearTimeout(writeTimeoutRef.current)
+        writeTimeoutRef.current = null
+      }
+    }
   }, [key, value])
 
   return [value, setValue] as const

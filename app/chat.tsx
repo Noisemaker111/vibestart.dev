@@ -38,8 +38,11 @@ export function Chat({ className }: Props) {
   })
 
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }, [messages])
+    // Avoid smooth scrolling during streaming to prevent jank/freezes
+    messagesEndRef.current?.scrollIntoView({
+      behavior: status === 'streaming' ? 'auto' : 'smooth',
+    })
+  }, [messages, status])
 
   const validateAndSubmitMessage = (text: string) => {
     if (text.trim()) {

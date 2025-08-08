@@ -20,6 +20,7 @@ export function Preview({ className, disabled, url }: Props) {
   const [isLoading, setIsLoading] = useState(false)
   const iframeRef = useRef<HTMLIFrameElement>(null)
   const loadStartTime = useRef<number | null>(null)
+  const refreshTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
     setCurrentUrl(url)
@@ -32,7 +33,7 @@ export function Preview({ className, disabled, url }: Props) {
       setError(null)
       loadStartTime.current = Date.now()
       iframeRef.current.src = ''
-      setTimeout(() => {
+      refreshTimeoutRef.current = window.setTimeout(() => {
         if (iframeRef.current) {
           iframeRef.current.src = currentUrl
         }
@@ -62,6 +63,15 @@ export function Preview({ className, disabled, url }: Props) {
     setIsLoading(false)
     setError('Failed to load the page')
   }
+
+  useEffect(() => {
+    return () => {
+      if (refreshTimeoutRef.current !== null) {
+        clearTimeout(refreshTimeoutRef.current)
+        refreshTimeoutRef.current = null
+      }
+    }
+  }, [])
 
   return (
     <Panel className={className}>

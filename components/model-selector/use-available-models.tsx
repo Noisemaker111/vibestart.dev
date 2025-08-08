@@ -13,6 +13,7 @@ export function useAvailableModels() {
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<Error | null>(null)
   const [retryCount, setRetryCount] = useState(0)
+  const retryTimeoutRef = useRef<number | null>(null)
 
   const fetchModels = useCallback(
     async (isRetry: boolean = false) => {
@@ -58,10 +59,15 @@ export function useAvailableModels() {
     if (retryCount === 0) {
       fetchModels(false)
     } else if (retryCount > 0 && retryCount <= MAX_RETRIES) {
-      const timerId = setTimeout(() => {
+      retryTimeoutRef.current = window.setTimeout(() => {
         fetchModels(true)
       }, RETRY_DELAY_MILLIS)
-      return () => clearTimeout(timerId)
+    }
+    return () => {
+      if (retryTimeoutRef.current !== null) {
+        clearTimeout(retryTimeoutRef.current)
+        retryTimeoutRef.current = null
+      }
     }
   }, [retryCount, fetchModels])
 

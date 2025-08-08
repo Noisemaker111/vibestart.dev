@@ -13,29 +13,42 @@ export function CommandLogs({ command, onLog, onCompleted }: Props) {
   const ref = useRef<Awaited<ReturnType<typeof getCommandLogs>>>(null)
 
   useEffect(() => {
+    const controller = new AbortController()
     if (!ref.current) {
-      const iterator = getCommandLogs(command.sandboxId, command.cmdId)
+      const iterator = getCommandLogs(
+        command.sandboxId,
+        command.cmdId,
+        controller.signal
+      )
       ref.current = iterator
       ;(async () => {
-        for await (const log of iterator) {
-          onLog({
-            sandboxId: command.sandboxId,
-            cmdId: command.cmdId,
-            log,
-          })
-        }
+        try {
+          for await (const log of iterator) {
+            onLog({
+              sandboxId: command.sandboxId,
+              cmdId: command.cmdId,
+              log,
+            })
+          }
 
-        const log = await getCommand(command.sandboxId, command.cmdId)
-        onCompleted({
-          sandboxId: log.sandboxId,
-          cmdId: log.cmdId,
-          startedAt: log.startedAt,
-          exitCode: log.exitCode ?? 0,
-          command: command.command,
-          args: command.args,
-        })
+          const log = await getCommand(command.sandboxId, command.cmdId)
+          onCompleted({
+            sandboxId: log.sandboxId,
+            cmdId: log.cmdId,
+            startedAt: log.startedAt,
+            exitCode: log.exitCode ?? 0,
+            command: command.command,
+            args: command.args,
+          })
+        } catch (error) {
+          // Ignore abort errors
+          if (!(error instanceof DOMException && error.name === 'AbortError')) {
+            console.error('Error streaming command logs', error)
+          }
+        }
       })()
     }
+    return () => controller.abort()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -65,28 +78,37 @@ const logSchema = z.object({
   timestamp: z.number(),
 })
 
-async function* getCommandLogs(sandboxId: string, cmdId: string) {
+async function* getCommandLogs(
+  sandboxId: string,
+  cmdId: string,
+  signal?: AbortSignal
+) {
   const response = await fetch(
     `/api/sandboxes/${sandboxId}/cmds/${cmdId}/logs`,
-    { headers: { 'Content-Type': 'application/json' } }
+    { headers: { 'Content-Type': 'application/json' }, signal }
   )
 
   const reader = response.body!.getReader()
   const decoder = new TextDecoder()
   let line = ''
-  while (true) {
-    const { done, value } = await reader.read()
-    if (done) break
+  while (!signal?.aborted) {
+    try {
+      const { done, value } = await reader.read()
+      if (done) break
 
-    line += decoder.decode(value, { stream: true })
-    const lines = line.split('\n')
-    for (let i = 0; i < lines.length - 1; i++) {
-      if (lines[i]) {
-        const logEntry = JSON.parse(lines[i])
-        yield logSchema.parse(logEntry)
+      line += decoder.decode(value, { stream: true })
+      const lines = line.split('\n')
+      for (let i = 0; i < lines.length - 1; i++) {
+        if (lines[i]) {
+          const logEntry = JSON.parse(lines[i])
+          yield logSchema.parse(logEntry)
+        }
       }
+      line = lines[lines.length - 1]
+    } catch (error) {
+      if (signal?.aborted) break
+      throw error
     }
-    line = lines[lines.length - 1]
   }
 }
 
